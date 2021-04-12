@@ -18,36 +18,47 @@
             </a>
         </nav>
     </header>
-    <div class="bg-blue" id = "display-weather">WEATHER</div>
+    <div class="container-fluid d-block">
+        <div class="d-flex flex-row-reverse">
+            <div class="col-4 bg-pink m-2 p-2">
+                <p id="display-weather"></p>
+            </div>
+          </div>
+    </div>
     <main id="background">
         <div class="container-fluid">
-            <div class="row flex-row-reverse">
-                <class class="col-3 bg-light p-3 shadow" id= "toDoList">
-                    <h3 id="ToDoing"><b></b></h3>
-                    <div class="" id='display-toDos'>
-
-                    </div>
-                    <form onsubmit="app.toDoController.createToDo()">
-                        <div>
-                           <!-- <input type="checkbox" id="scales" name="scales">
-                           <span for="scales">Hello</span> -->
-                           </div>
-                           <div>
-                           <input type="text" name="description" placeholder = "Add new item" required minlength="4" maxlength="20"><button class="btn btn-success" type ="submit">+</button>
-                    </form>
-                    </class>
-                </div>
-            </div>
             <div class="row">
-                <div class="col text-center" id="clock"><BR><BR>
-                    <iframe src="https://free.timeanddate.com/clock/i7r8g5ei/n42/fn8/fs48/fceee/tct/pct/ftb/bas2/baceee/th2" frameborder="0" width="323" height="60" allowtransparency="true"></iframe>
-                    <BR>
+                <div class="col">
                 </div>
             </div>
         </div>
-
+        <div class="container-fluid">
+            <div class="row">   
+                <div class="col text-center" id="clock"><BR><BR><BR><BR><BR><BR><BR><BR><BR>
+                    <iframe src="https://free.timeanddate.com/clock/i7r8g5ei/n42/fn8/fs48/fceee/tct/pct/ftb/bas2/baceee/th2" frameborder="0" width="323" height="60" allowtransparency="true"></iframe>
+                    <BR>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
-        <div class="bg-yellow">
+            <div class="container-fluid">
+                <div class="row flex-row-reverse">
+                    <class class="col-3 bg-light p-3 shadow" id= "toDoList">
+                        <h3 id="ToDoing"><b></b></h3>
+                        <div class="" id='display-toDos'>
+                        </div>
+                        <form onsubmit="app.toDoController.createToDo()">
+                            <div>
+                               </div>
+                               <div>
+                               <input type="text" name="description" placeholder = "Add new item" required minlength="4" maxlength="20">
+                               <button class="btn btn-success" type ="submit">Add</button>
+                        </form>
+                        </class>
+                    </div>
+                </div>
+        <div class="bg-light">
             <div id="display-quote"></div>
             <div class="display-author"></div>
         </div>

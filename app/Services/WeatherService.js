@@ -8,9 +8,9 @@ class WeatherService{
         ProxyState.currentWeather = result.data
     }
 
-
-    async switchWeather(){
+    async switchWeather(id){
         console.log("Weather SERV")
+
     }
 
 

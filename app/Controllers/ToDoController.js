@@ -3,7 +3,6 @@ import { toDoService } from "../Services/ToDoService.js"
 import { ToDoApi } from "../Services/AxiosService.js"
 
 function _draw(){
-
     let toDoList = ProxyState.ToDos;
     let listTemplate = ''
     toDoList.forEach(x => listTemplate += x.toDoTemplate)
@@ -11,12 +10,11 @@ function _draw(){
   }
     
 function _drawCheckBox(){
-  let list = ProxyState.ToDos
-  console.log(list)
-  let total = list.length
-  let finish = 0
-  list.forEach(x => {if(x.completed === true){finish+=1}})
-  document.getElementById('ToDoing').innerHTML = `Completed: ${finish} | Total:${total}`
+  let todoList = ProxyState.ToDos
+  let total = todoList.length
+  let complete = 0
+  todoList.forEach(z => {if (z.completed === true)   {complete+=1}  })
+  document.getElementById('ToDoing').innerHTML = `Completed: ${complete} | Total:${total}`
 }
 
 
@@ -42,7 +40,6 @@ export default class ToDoController{
 
 
       async checkedToDo(id){
-        console.log("CBOX CON")
         try {
           toDoService.checkedToDo(id)
         } catch (error) {
@@ -66,7 +63,6 @@ export default class ToDoController{
         }
 
         deleteToDo(id){
-            console.log(" TO DO  CON")
             try {
                 toDoService.deleteToDo(id)
             } catch (error) {

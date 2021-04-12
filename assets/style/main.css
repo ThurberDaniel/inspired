@@ -10700,6 +10700,13 @@ body{
 }
 
 
+
+.lineOut{
+  text-decoration: line-through;
+  color: red;
+}
+
+
 .showAuthor{
   display: none;
 }
@@ -10709,9 +10716,7 @@ body{
   color: purple;
 }
 
-.showQuote{
-  cursor: pointer;
-}
+
 
 
 

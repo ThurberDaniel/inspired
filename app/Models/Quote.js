@@ -8,9 +8,9 @@ export default class Quote{
 
     get qTemplate(){
         return `
-            <div class = "text-center">
-                <p class="showQuote">${this.content}</p>
-                <p class="showAuthor">${this.author}</p>
+            <div class = "text-center m-4">
+                <p class="p-4 showQuote"><b>Quote:</b>" ${this.content} "</p>
+                <h4 class="p-4 showAuthor">Author: ${this.author}</h4>
                 </div>
 
 `

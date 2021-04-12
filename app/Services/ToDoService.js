@@ -7,7 +7,6 @@ import ToDo from "../Models/ToDo.js";
 
 class ToDoService {
 
-
   async getAllToDo() {
       let result = await ToDoApi.get()
       ProxyState.ToDos = result.data.map(p => new ToDo(p))
@@ -17,7 +16,6 @@ class ToDoService {
       async createToDo(description){
         let result = await ToDoApi.post('', description)
         ProxyState.ToDos = [...ProxyState.ToDos, new ToDo(result.data)]
-        console.log(ProxyState.ToDos)
       }
 
 
@@ -28,7 +26,6 @@ class ToDoService {
 
 
       async checkedToDo(id){
-        console.log("hellp")
         let item = ProxyState.ToDos.find(x => x.id === id)
         if(item.completed == false){
           item.completed = true
